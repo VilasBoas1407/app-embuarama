@@ -3,6 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { Container } from './styles';
 
+import Header from '../../../components/layout/header';
 
 export default function Login(){
 
@@ -15,7 +16,7 @@ export default function Login(){
 
     return (
         <Container>
-           
+           <Header />
         </Container>
 
     );

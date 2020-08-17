@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Text } from 'react-native';
-
 import { Icon } from 'react-native-elements';
 import { User,UserName,CountReport,BorderUser, Container,Notifications } from './styles';
 
