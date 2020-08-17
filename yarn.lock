@@ -980,6 +980,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/fredoka-one/-/fredoka-one-0.1.0.tgz#533d527fec72aded081c9818f5b0580596a4aac4"
   integrity sha512-sgENru16BMD8qnmYMc+eRAT9B8wj84ceFX4LvlCy+EcUwra+QsWiF8VoSALW3Cg+0cH1tCg/1rHkka7wj9G7/g==
 
+"@expo-google-fonts/open-sans@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/open-sans/-/open-sans-0.1.0.tgz#3825d48afa7b9176af7202be28067ad774536819"
+  integrity sha512-haXOb/9IF8UxXIGRUIrXqPDJF/QIicuJUqbBrPUshqJ8q8On4/Om1qPltlfl/ijn/15LYyhIQJRYKfrigJmO4g==
+
 "@expo-google-fonts/poppins@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/poppins/-/poppins-0.1.0.tgz#aae4df9e80d68ec9dc6764e57dc931f1f64016cd"
