@@ -27,6 +27,6 @@ export const Title = styled.Text`
 
 export const ImageDiv = styled.View`
     padding-top: 2%;
-    padding-left: 15%;
+    padding-left: 13%;
     margin-left: 5%;
 `;

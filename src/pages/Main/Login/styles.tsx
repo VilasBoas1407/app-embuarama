@@ -7,3 +7,8 @@ export const Container = styled.View`
     padding-bottom: 5%;
     background-color: #FFF;
 `;
+
+export const View = styled.View`
+    padding-top: 30%;
+    display: flex;
+`;
