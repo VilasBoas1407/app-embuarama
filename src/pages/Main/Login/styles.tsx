@@ -9,6 +9,6 @@ export const Container = styled.View`
 `;
 
 export const View = styled.View`
-    padding-top: 30%;
+    padding-top: 24%;
     display: flex;
 `;

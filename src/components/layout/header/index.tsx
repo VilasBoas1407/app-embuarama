@@ -23,7 +23,6 @@ export default function Header(){
                 <TitleBold>EMBUARAMA</TitleBold>               
                 <Title>CONSULTORIA</Title>
             </View>
-            
         </Container>
     );
 }

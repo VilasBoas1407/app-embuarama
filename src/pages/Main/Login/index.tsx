@@ -24,7 +24,7 @@ export default function Login(){
 
                 <Input text={'Usuário'} onChange={''} type={'text'}/>   
                 <Input text={'Senha'} onChange={''} type={'password'}/>             
-                <ButtonGrey text={'Concluir'} onPress={''}/>
+                <ButtonGrey text={'Logar'} onPress={''}/>
 
             </View>
 

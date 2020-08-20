@@ -2,7 +2,7 @@ import styled  from 'styled-components/native';
 
 export const Container = styled.View`
     background-color:#FFF;
-    padding-top: 2%;
+    padding-top: 4%;
     padding-bottom: 2%;
     flex-direction: row; 
     display: flex;
@@ -10,7 +10,7 @@ export const Container = styled.View`
 `;
 
 export const TitleBold = styled.Text`
-    margin-top: 9%;
+    margin-top: 12%;
     margin-left: 5%;
     font-family: OpenSans_700Bold;
     font-size : 18px;
