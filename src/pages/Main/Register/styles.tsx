@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import {heightPercentageToDP}  from '../../../utils/PixelRatio';
 
 export const Container = styled.View`
     padding-top:5%;
@@ -9,6 +10,7 @@ export const Container = styled.View`
 `;
 
 export const View = styled.View`
-    padding-top: 24%;
+    padding-top: ${heightPercentageToDP('0.5')}%;
+    padding-bottom: ${heightPercentageToDP('2')}%;
     display: flex;
 `;

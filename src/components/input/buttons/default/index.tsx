@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-
+import { widthPercentageToDP }  from '../../../../utils/PixelRatio';
 
 interface Iprops {
     text : string
@@ -8,7 +8,7 @@ interface Iprops {
 }
 
 const Button = styled.TouchableOpacity`
-    background: #1D293F;
+    background: #E5E5E5;
     border-radius: 7.50685px;
     height: 56px;
     width: 100%;
@@ -21,13 +21,14 @@ const Text = styled.Text`
     font-size: 24px;
     line-height: 24px;
     text-align: center;
-    color: #FFFFFF;
+    color: #000000;
     padding-top: 16px;
 `;
 
 const View = styled.View`
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: ${widthPercentageToDP('2')};
+    margin-right: ${widthPercentageToDP('2')};
+    margin-top: ${widthPercentageToDP('2')}
 `;
 
 export default function ButtonGrey(props : Iprops){

@@ -24,7 +24,7 @@ export const Text = styled.Text`
     font-family: OpenSans_400Regular;
     font-size: 16px;
     text-align: center;
-    color: #000000
+    color: #000000;
     margin-top: ${heightPercentageToDP('1')}%;
     margin-bottom: ${heightPercentageToDP('1')}%;
 `;

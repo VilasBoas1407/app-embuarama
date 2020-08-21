@@ -1,5 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import styled from 'styled-components/native';
+import {heightPercentageToDP}  from '../../../utils/PixelRatio';
 
 const Input = styled.TextInput`
     background: #FFFFFF;
@@ -24,8 +25,8 @@ const Label = styled.Text`
 `;
 
 const View = styled.View`
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: ${heightPercentageToDP('0.1')}%;
+    margin-bottom: ${heightPercentageToDP('0.1')}%;
 `;
 interface Iprops {
     text : string

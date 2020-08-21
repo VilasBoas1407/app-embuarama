@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-
+import { widthPercentageToDP }  from '../../../../utils/PixelRatio';
 
 interface Iprops {
     text : string
@@ -26,8 +26,9 @@ const Text = styled.Text`
 `;
 
 const View = styled.View`
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: ${widthPercentageToDP('2')};
+    margin-right: ${widthPercentageToDP('2')};
+    margin-top: ${widthPercentageToDP('2')}
 `;
 
 export default function ButtonGrey(props : Iprops){

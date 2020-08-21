@@ -13,6 +13,9 @@ export default function Login(){
 
     const navigation = useNavigation();
 
+    function handleNavigationToRegister(){
+        navigation.navigate('Register');
+    }
     function handleNavigateToHome(){
         console.log('Chegou')
         api.request({   
@@ -43,7 +46,7 @@ export default function Login(){
                 <Input text={'Usuário'} onChange={''} type={'text'}/>   
                 <Input text={'Senha'} onChange={''} type={'password'}/>     
                 <Checkbox label={'Permanecer logado'} />
-                <TouchableOpacity>
+                <TouchableOpacity onPress={handleNavigationToRegister}>
                     <Text>Esqueci minha senha</Text>
                 </TouchableOpacity>
                 <ButtonGrey text={'Logar'} onPress={handleNavigateToHome}/>
