@@ -20,7 +20,7 @@ const Label = styled.Text`
     display: flex;
     align-items: center;
     color: #693A0E;
-    margin-bottom: 2%;z
+    margin-bottom: 2%;
 `;
 
 const View = styled.View`
