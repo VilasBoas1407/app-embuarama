@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { CheckBox } from 'react-native';
+import {heightPercentageToDP, widthPercentageToDP} from '../../../utils/PixelRatio';
 
 interface checkbox {
-    label : string,
-    state : boolean
+    label : string
 }
 
 const View = styled.View`
@@ -13,18 +13,20 @@ const View = styled.View`
 `;
 
 const Label = styled.Text`
-    font-family: Poppins_300Light
-    font-size: 12px;
+    font-family: OpenSans_400Regular
+    font-size: 18px;
     line-height: 18px;
     position:absolute;
-    margin-top: 3%;
-    margin-left:10%;
+    margin-top: ${heightPercentageToDP('1')}%;
+    margin-bottom: ${heightPercentageToDP('1')}%;
+    margin-left:${widthPercentageToDP('3')}%;
 `;
+
 export default function Checkbox(props : checkbox){
     const { label } =  props;
     return(
         <View>
-            <CheckBox/>
+            <CheckBox style={{ width : 75 , height: 50 ,borderColor: '#9097A5'}}/>
             <Label>{label}</Label>
         </View>
     );
