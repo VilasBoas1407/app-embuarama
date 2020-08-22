@@ -17,22 +17,22 @@ export default function Login(){
         navigation.navigate('Register');
     }
     function handleNavigateToHome(){
-        console.log('Chegou')
-        api.request({   
-            method: 'GET',
-            url: `/user`,
-            params: {
-                ds_login: "ds_email",
-                ds_senha : "ds_senha"
-            },
+        // console.log('Chegou')
+        // api.request({   
+        //     method: 'GET',
+        //     url: `/user`,
+        //     params: {
+        //         ds_login: "ds_email",
+        //         ds_senha : "ds_senha"
+        //     },
           
-          }).then(function(response){
-              console.log("Response")
-              console.log(response)
-          }).catch(function(err){
-              console.log(err)
-          });
-
+        //   }).then(function(response){
+        //       console.log("Response")
+        //       console.log(response)
+        //   }).catch(function(err){
+        //       console.log(err)
+        //   });
+        navigation.navigate('Home');
 
     }
 
