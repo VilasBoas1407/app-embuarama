@@ -13,12 +13,12 @@ export default function Home(){
             <Container>
                 <Header />
             </Container>
-            
+
             <SafeAreaView>    
                 <Container>
                 </Container>
             </SafeAreaView>
-            <Footer/>
+            <Footer page={'Login'}/>
         </>
     );
 }
