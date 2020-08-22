@@ -1,15 +1,27 @@
-import React from 'react';
-import {Text} from 'react-native';
-import { Container } from './style';
-import { useNavigation } from '@react-navigation/native';
-
-export default function Footer(){
-
-    const navigation = useNavigation();
-
-    return(
-        <Container>
-            <Text>Teste</Text>
-        </Container>
+import React, { Component } from 'react';
+import { Container, Header, Content, Footer, FooterTab, Button, Text } from 'native-base';
+export default class FooterTabsExample extends Component {
+  render() {
+    return (
+      <Container>
+        <Content />
+        <Footer>
+          <FooterTab>
+            <Button>
+              <Text>Apps</Text>
+            </Button>
+            <Button>
+              <Text>Camera</Text>
+            </Button>
+            <Button active>
+              <Text>Navigate</Text>
+            </Button>
+            <Button>
+              <Text>Contact</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
+      </Container>
     );
+  }
 }

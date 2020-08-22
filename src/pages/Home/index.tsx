@@ -9,12 +9,14 @@ import {Container} from './styles';
 export default function Home(){
 
     return (
-        <SafeAreaView>    
-            <Header />
-            <Container>
+        <>
+            <SafeAreaView>    
+                <Header />
+                <Container>
                     
-            </Container>
+                </Container>
+            </SafeAreaView>
             <Footer/>
-        </SafeAreaView>
+        </>
     );
 }
