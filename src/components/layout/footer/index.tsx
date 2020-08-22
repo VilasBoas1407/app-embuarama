@@ -3,8 +3,7 @@ import { View } from 'react-native';
 import { Container, Content, Footer, FooterTab, Button, Text } from 'native-base';
 import { Ionicons } from '@expo/vector-icons';
 
-export default class FooterTabs extends Component {
-  render() {
+export default function FooterTabs(){
     return (
       <Container>
         <Content />
@@ -26,4 +25,3 @@ export default class FooterTabs extends Component {
       </Container>
     );
   }
-}
