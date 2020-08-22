@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Footer, FooterTab, Button, Text } from 'native-base';
-export default class FooterTabsExample extends Component {
+import { View } from 'react-native';
+import { Container, Content, Footer, FooterTab, Button, Text } from 'native-base';
+import { Ionicons } from '@expo/vector-icons';
+
+export default class FooterTabs extends Component {
   render() {
     return (
       <Container>
         <Content />
         <Footer>
-          <FooterTab>
+          <FooterTab style={{backgroundColor: '#FFFFFF'}}>
             <Button>
-              <Text>Apps</Text>
+                <View style={{borderRadius: 50, borderColor: '#000', borderWidth: 1, paddingLeft: 5, paddingRight: 5}}>
+                    <Ionicons name="md-arrow-back" size={32} color="black" />
+                </View>
             </Button>
             <Button>
-              <Text>Camera</Text>
-            </Button>
-            <Button active>
-              <Text>Navigate</Text>
+                <Ionicons name="md-home" size={32} color="black" />
             </Button>
             <Button>
-              <Text>Contact</Text>
+                <Ionicons name="md-cog" size={32} color="black" />
             </Button>
           </FooterTab>
         </Footer>

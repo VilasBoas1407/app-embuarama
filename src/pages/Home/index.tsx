@@ -10,8 +10,8 @@ export default function Home(){
 
     return (
         <>
+            <Header />
             <SafeAreaView>    
-                <Header />
                 <Container>
                     
                 </Container>
