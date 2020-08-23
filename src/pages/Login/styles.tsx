@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import {heightPercentageToDP}  from '../../../utils/PixelRatio';
+import {heightPercentageToDP}  from '../../utils/PixelRatio';
 
 export const Container = styled.View`
     padding-top:5%;

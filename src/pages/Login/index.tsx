@@ -2,12 +2,12 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import { Container,View,TouchableOpacity,Text } from './styles';
-import Header from '../../../components/layout/header';
-import Input from '../../../components/input/text';
-import ButtonGrey from '../../../components/input/buttons/grey';
-import Checkbox from '../../../components/input/checkbox';
+import Header from '../../components/layout/header';
+import Input from '../../components/input/text';
+import ButtonGrey from '../../components/input/buttons/grey';
+import Checkbox from '../../components/input/checkbox';
 
-import api from '../../../services/api';
+import api from '../../services/api';
 
 export default function Login(){
 
@@ -32,7 +32,7 @@ export default function Login(){
         //   }).catch(function(err){
         //       console.log(err)
         //   });
-        navigation.navigate('Home');
+        navigation.navigate('HomeAdmin');
 
     }
 

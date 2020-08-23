@@ -30,7 +30,7 @@ export default function FooterTabs(props : Iprops){
         <Content />
         <Footer>
           <FooterTab style={{backgroundColor: '#FFFFFF', borderTopWidth:1}}>
-
+            
             <Button>
                 <TouchableOpacity onPress={goBack}>
                     <View style={{borderRadius: 50, borderColor: '#000', borderWidth: 1, paddingLeft: 5, paddingRight: 5}}>
