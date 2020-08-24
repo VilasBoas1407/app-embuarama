@@ -1,5 +1,6 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import Header from '../../../components/layout/header';
 import Footer from '../../../components/layout/footer';
@@ -9,6 +10,13 @@ import {Container} from './styles';
 
 export default function Home(){
 
+    
+    const navigation = useNavigation();
+
+    function goRegisterCompany(){
+        navigation.navigate('Register');
+    }
+
     return (
         <>
             <Container>
@@ -17,7 +25,7 @@ export default function Home(){
 
             <SafeAreaView>    
                 <Container>
-                   <Button text={'Cadastrar Empresa'} onPress={''}/>
+                   <Button text={'Cadastrar Empresa'} onPress={goRegisterCompany}/>
                    <Button text={'Visualizar Empresas '} onPress={''}/>                   
                    <Button text={'Cadastrar Usuário'} onPress={''}/>
                 </Container>

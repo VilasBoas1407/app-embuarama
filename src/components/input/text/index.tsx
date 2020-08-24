@@ -9,7 +9,7 @@ const Input = styled.TextInput`
     height: 55px;
     font-size: 16px;
     padding-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 `;
 
 const Label = styled.Text`
@@ -30,12 +30,13 @@ const View = styled.View`
 `;
 interface Iprops {
     text : string
-    onChange : any
+    onChangeText : any
     type : string
+    value : string
 }
 
 export default function TextInput(props : Iprops){
-    const { onChange,text, type } = props;
+    const { onChangeText,text, type,value } = props;
     let pass = false;
 
     if(type === 'password')
@@ -43,7 +44,7 @@ export default function TextInput(props : Iprops){
     return(
         <View>
             <Label>{text}</Label>
-            <Input onChange={onChange} secureTextEntry={pass}/>
+            <Input onChangeText={onChangeText} secureTextEntry={pass} value={value}/>
         </View>
     );
 }

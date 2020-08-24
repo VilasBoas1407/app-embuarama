@@ -43,8 +43,8 @@ export default function Login(){
 
             <View>
 
-                <Input text={'Usuário'} onChange={''} type={'text'}/>   
-                <Input text={'Senha'} onChange={''} type={'password'}/>     
+                <Input text={'Usuário'} onChangeText={''} type={'text'} value={''}/>   
+                <Input text={'Senha'} onChangeText={''} type={'password'} value={''}/>     
                 <Checkbox label={'Permanecer logado'} />
                 <TouchableOpacity onPress={handleNavigationToRegister}>
                     <Text>Esqueci minha senha</Text>
