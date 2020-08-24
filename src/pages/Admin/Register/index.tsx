@@ -58,6 +58,20 @@ return(
                             />   
                             { props.errors.DS_EMAIL_EMPRESA && <Erro>{props.errors.DS_EMAIL_EMPRESA}</Erro> }
                             <Input 
+                                text={'DDD'} 
+                                onChangeText={(text: string) => props.setFieldValue('NR_DDD', text)} 
+                                type={'text'} 
+                                value={props.values.NR_DDD}
+                            />   
+                            { props.errors.NR_DDD && <Erro>{props.errors.NR_DDD}</Erro> }
+                            <Input 
+                                text={'Telefone'} 
+                                onChangeText={(text: string) => props.setFieldValue('NR_TELEFONE', text)} 
+                                type={'text'} 
+                                value={props.values.NR_TELEFONE}
+                            />   
+                            { props.errors.NR_TELEFONE && <Erro>{props.errors.NR_TELEFONE}</Erro> }
+                            <Input 
                                 text={'Login'} 
                                 onChangeText={(text: string) => props.setFieldValue('DS_LOGIN', text)} 
                                 type={'text'} 
@@ -91,10 +105,13 @@ export default withFormik({
       DS_EMAIL_EMPRESA : '',
       DS_LOGIN : '',
       DS_SENHA : '',
-      FL_EMPRESA : 1
+      FL_EMPRESA : 1,
+      NR_DDD: '',
+      NR_TELEFONE : ''
   }),
 
   validationSchema: Yup.object().shape({
+
     DS_NOME_EMPRESA : Yup.string()
     .required('Preencha o campo de nome empresa'),
     DS_NOME_RESPONSAVEL: Yup.string()
@@ -109,9 +126,18 @@ export default withFormik({
       .min(6, 'O login deve ter no mínimo 6 caracteres')
       .required('Preencha o campo de login'),
     NR_CNPJ: Yup.string()
-      .min(13, 'Digite um CNPJ Válido')
+      .min(14, 'Digite um CNPJ Válido')
       .max(14,'Digite um CNPJ Válido')
       .required('Preencha o campo de CNPJ'),
+    NR_DDD: Yup.string()
+    .min(2, 'Digite um DDD Válido')
+    .max(2,'Digite um DDD Válido')
+    .required('Preencha o campo de DDD'),
+    NR_TELEFONE: Yup.string()
+    .min(8, 'Digite um telefone Válido')
+    .max(9,'Digite um telefone Válido')
+    .required('Preencha o campo de telefone'),
+
   }),
 
   handleSubmit: (values) => {

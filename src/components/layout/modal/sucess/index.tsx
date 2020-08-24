@@ -1,0 +1,32 @@
+import React from 'react';
+import { Modal } from 'react-native';
+import {  Background,View, Text, Button, TextBtn } from './styles';
+
+interface Iprops{
+    loading : boolean,
+    message : string,
+    onPress : any
+}
+
+export default function Sucess(props : Iprops){
+
+    const { loading,message, onPress } = props;
+
+    return(
+        <Modal
+            transparent={true}
+            animationType={'none'}
+            visible={loading}
+        >
+            <Background />
+                <View>
+                    <Text style={{color:'green',fontWeight:'bold'}}>Sucesso!</Text>
+                    <Text style={{paddingBottom:10,paddingTop:10}}>{message}</Text>
+
+                    <Button onPress={onPress}>
+                        <TextBtn>Fechar</TextBtn>
+                    </Button>
+                </View>
+        </Modal>
+    );
+}

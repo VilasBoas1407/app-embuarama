@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import { Container,View,TouchableOpacity,Text } from './styles';
@@ -9,13 +9,22 @@ import Checkbox from '../../components/input/checkbox';
 
 import api from '../../services/api';
 
+import Sucess from '../../components/layout/modal/sucess';
+import Error from '../../components/layout/modal/error';
+
 export default function Login(){
 
     const navigation = useNavigation();
+    
+    const [loading,setLoading] = useState(false);
+    const [sucess,setSucess] = useState('');
+    const [erro,setErro] = useState('');
+    const [loadingError, setLoadingError] = useState(false);
 
     function handleNavigationToRegister(){
         navigation.navigate('Register');
     }
+
     function handleNavigateToHome(){
         // console.log('Chegou')
         // api.request({   
@@ -32,8 +41,18 @@ export default function Login(){
         //   }).catch(function(err){
         //       console.log(err)
         //   });
-        navigation.navigate('HomeAdmin');
+        //navigation.navigate('HomeAdmin');
 
+        setLoading(true);
+
+    }
+
+    function openModal(){
+        setLoading(!loading);
+    }
+    
+    function openModalError(){
+        setLoadingError(!loadingError);
     }
 
     return (
@@ -51,6 +70,8 @@ export default function Login(){
                 </TouchableOpacity>
                 <ButtonGrey text={'Logar'} onPress={handleNavigateToHome}/>
 
+                <Sucess loading={loading} message={sucess} onPress={openModal}/>
+                <Error loading={loadingError} message={erro} onPress={openModalError}/>
             </View>
 
         </Container>

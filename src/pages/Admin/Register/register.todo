@@ -4,6 +4,7 @@ Regras
 
  A fazer 
   [x] Conectar com API
-  [] Testar api kkk
+  [x] Testar api kkk
+  [] Adicionar máscaras
   [] Modal de erro para campos invalidos
   [] Modal de sucesso
