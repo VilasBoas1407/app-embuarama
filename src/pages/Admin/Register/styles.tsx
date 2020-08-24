@@ -12,7 +12,6 @@ export const Container = styled.View`
 export const View = styled.View`
     padding-top: ${heightPercentageToDP('0.5')}%;
     padding-bottom: ${heightPercentageToDP('2')}%;
-    display: flex;
 `;
 
 export const Erro = styled.Text`

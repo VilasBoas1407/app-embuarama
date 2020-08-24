@@ -6,6 +6,7 @@ import { withFormik } from 'formik';
 import * as Yup from 'yup';
 
 import Header from '../../../components/layout/header';
+import Footer from '../../../components/layout/footer';
 import Input from '../../../components/input/text';
 import ButtonGrey from '../../../components/input/buttons/grey';
 import ButtonDefault from '../../../components/input/buttons/default';
@@ -15,7 +16,7 @@ function Form(props : any){
 const navigation = useNavigation();
 
 function handleNavigateToHome(){
-    navigation.navigate('Login');
+    navigation.navigate('HomeAdmin');
 }
 
 return(
@@ -113,7 +114,7 @@ export default withFormik({
   }),
 
   handleSubmit: (values) => {
-    console.log(values);
+    
   },
 })(Form);
   
