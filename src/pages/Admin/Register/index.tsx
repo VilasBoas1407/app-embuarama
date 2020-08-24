@@ -6,11 +6,12 @@ import { withFormik } from 'formik';
 import * as Yup from 'yup';
 
 import Header from '../../../components/layout/header';
-import Footer from '../../../components/layout/footer';
 import Input from '../../../components/input/text';
 import ButtonGrey from '../../../components/input/buttons/grey';
 import ButtonDefault from '../../../components/input/buttons/default';
-    
+
+import api from '../../../services/api';
+
 function Form(props : any){
     
 const navigation = useNavigation();
@@ -114,7 +115,18 @@ export default withFormik({
   }),
 
   handleSubmit: (values) => {
-    
+    console.log('Entrou')
+    console.log(values);
+    api.request({   
+            method: 'POST',
+            url: `/company/register`,
+            data: values 
+          }).then(function(response){
+              console.log("Response")
+              console.log(response)
+          }).catch(function(err){
+              console.log(err)
+          });
   },
 })(Form);
   

@@ -1,0 +1,9 @@
+
+Regras
+ Ao criar um cadastro de empresa na tabela TB_EMPRESA, é gerado também um cadastro na tabela TB_USUARIO com a FL_EMPRESA = true;
+
+ A fazer 
+  [x] Conectar com API
+  [] Testar api kkk
+  [] Modal de erro para campos invalidos
+  [] Modal de sucesso
