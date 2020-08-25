@@ -1,4 +1,4 @@
 Tarefas
     [x] Conectar com api
-    [] Validar campos com Yup
-    [] Redirecionamento de acordo com o tipo de usuário. -> Empresa ou Funcioário
+    [x] Validar campos com Yup
+    [x] Redirecionamento de acordo com o tipo de usuário. -> Empresa ou Funcioário

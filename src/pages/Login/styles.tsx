@@ -28,3 +28,10 @@ export const Text = styled.Text`
     margin-top: ${heightPercentageToDP('1')}%;
     margin-bottom: ${heightPercentageToDP('1')}%;
 `;
+
+export const Erro = styled.Text`
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 12px;
+    padding-bottom: 5px;
+`;
