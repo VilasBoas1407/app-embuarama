@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState  } from 'react';
+import {AsyncStorage} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
@@ -13,6 +14,7 @@ import api from '../../services/api';
 
 import Sucess from '../../components/layout/modal/sucess';
 import Error from '../../components/layout/modal/error';
+
 
 function Login(props: any){
 
@@ -39,11 +41,13 @@ function Login(props: any){
                 ds_senha : DS_SENHA
             },
           
-          }).then(function(response){
-              console.log(response.data)
+          }).then(async function(response){
+
                 if(response.data.valid){
                   const userData = response.data.userData;
-                    console.log(userData);
+
+                    await AsyncStorage.setItem('userData',JSON.stringify(userData));
+
                     if(userData.FL_EMPRESA === true || userData.FL_EMPRESA === true)
                         navigation.navigate('HomeAdmin');
                     else
@@ -55,9 +59,7 @@ function Login(props: any){
 
           }).catch(function(err){
               console.log(err);
-              //openModalError(err);
           });
-        // 
 
     }
 
@@ -96,7 +98,7 @@ function Login(props: any){
                 <TouchableOpacity onPress={handleNavigationToRegister}>
                     <Text>Esqueci minha senha</Text>
                 </TouchableOpacity>
-                <ButtonGrey text={'Logar'} onPress={handleNavigateToHome}/>
+                <ButtonGrey text={'Logar'} onPress={handleNavigateToHome} visible={true}/>
 
                 <Sucess loading={loading} message={sucess} onPress={openModal}/>
                 <Error loading={loadingError} message={erro} onPress={openModalError}/>
