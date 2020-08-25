@@ -6,5 +6,6 @@ Regras
   [x] Conectar com API
   [x] Testar api kkk
   [] Adicionar máscaras
-  [] Modal de erro para campos invalidos
-  [] Modal de sucesso
+  [] Scroll infinito
+  [x] Modal de erro para campos invalidos
+  [x] Modal de sucesso
