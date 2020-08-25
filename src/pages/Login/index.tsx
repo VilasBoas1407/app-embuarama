@@ -48,7 +48,7 @@ function Login(props: any){
 
                     await AsyncStorage.setItem('userData',JSON.stringify(userData));
 
-                    if(userData.FL_EMPRESA === true || userData.FL_EMPRESA === true)
+                    if(userData.FL_EMPRESA === true || userData.FL_ADMINISTRADOR === true)
                         navigation.navigate('HomeAdmin');
                     else
                         navigation.navigate('Home');

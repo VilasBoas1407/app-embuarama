@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Login from './pages/Login';
 
-import Home from './pages/Home';
+import Home from './pages/User/Home';
 
 import HomeAdmin from './pages/Admin/Home';
 import Register from './pages/Admin/Register';

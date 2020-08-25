@@ -4,10 +4,10 @@ import { useNavigation } from '@react-navigation/native';
 import { Container,View } from './styles';
 
 
-import Header from '../../components/layout/header';
-import Input from '../../components/input/text';
-import ButtonGrey from '../../components/input/buttons/grey';
-import ButtonDefault from '../../components/input/buttons/default';
+import Header from '../../../components/layout/header';
+import Input from '../../../components/input/text';
+import ButtonGrey from '../../../components/input/buttons/grey';
+import ButtonDefault from '../../../components/input/buttons/default';
 
 export default function Login(){
 
@@ -27,12 +27,12 @@ export default function Login(){
                     <Header />
                         <View>
 
-                            <Input text={'Nome'} onChange={''} type={'text'}/>   
-                            <Input text={'Telefone'} onChange={''} type={'text'}/>      
-                            <Input text={'E-mail'} onChange={''} type={'text'}/>   
-                            <Input text={'Senha'} onChange={''} type={'password'}/>   
-                            <Input text={'Confirmar Senha'} onChange={''} type={'password'}/>         
-                            <Input text={'Token da Empresa'} onChange={''} type={'text'}/>
+                            <Input text={'Nome'} onChangeText={''} type={'text'} value={''}/>   
+                            <Input text={'Telefone'} onChangeText={''} type={'text'} value={''}/>      
+                            <Input text={'E-mail'} onChangeText={''} type={'text'} value={''}/>   
+                            <Input text={'Senha'} onChangeText={''} type={'password'} value={''}/>   
+                            <Input text={'Confirmar Senha'} onChangeText={''} type={'password'} value={''}/>         
+                            <Input text={'Token da Empresa'} onChangeText={''} type={'text'} value={''}/>
                             
                             <ButtonGrey text={'Cadastrar'} onPress={''}/>
                             <ButtonDefault text={'Voltar'} onPress={handleNavigateToHome}/>

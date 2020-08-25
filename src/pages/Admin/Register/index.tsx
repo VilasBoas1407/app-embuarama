@@ -85,7 +85,7 @@ return(
                                 value={props.values.DS_SENHA}
                             />
                             { props.errors.DS_SENHA && <Erro>{props.errors.DS_SENHA}</Erro> }
-                            <ButtonGrey text={'Cadastrar'} onPress={props.handleSubmit} />
+                            <ButtonGrey text={'Cadastrar'} onPress={props.handleSubmit} visible={true}/>
                             <ButtonDefault text={'Voltar'} onPress={handleNavigateToHome}/>
                         </View>
                     </Container>
