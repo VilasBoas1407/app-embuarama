@@ -141,17 +141,13 @@ export default withFormik({
   }),
 
   handleSubmit: (values) => {
-    console.log('Entrou')
-    console.log(values);
+
     api.request({   
             method: 'POST',
             url: `/company/register`,
             data: values 
           }).then(function(response){
-              console.log("Response")
-              console.log(response)
           }).catch(function(err){
-              console.log(err)
           });
   },
 })(Form);

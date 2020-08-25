@@ -28,8 +28,7 @@ export default function Home(){
             let userData = await AsyncStorage.getItem('userData');
             const user = userData != null ? JSON.parse(userData) : null;
             setUserData(user);
-            console.log('User data')
-            console.log(user);
+
             if(user.FL_EMPRESA === true){
                 setScreen({
                     show_empresa: true,
@@ -46,7 +45,7 @@ export default function Home(){
 
         loadUser();
     },[]);
-    
+
     return (
         <>
             <Container>

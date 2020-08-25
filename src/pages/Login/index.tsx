@@ -57,9 +57,7 @@ function Login(props: any){
                     openModalError(response.data.message)
                 }
 
-          }).catch(function(err){
-              console.log(err);
-          });
+          }).catch(function(err){});
 
     }
 
@@ -121,7 +119,5 @@ export default withFormik({
         .required('O campo senha é obrigatório')
     }),
 
-    handleSubmit: (values) => {
-        console.log(values)   
-    }
+    handleSubmit: (values) => {}
 })(Login);
