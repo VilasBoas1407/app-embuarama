@@ -14,3 +14,10 @@ export const View = styled.View`
     padding-bottom: ${heightPercentageToDP('2')}%;
     display: flex;
 `;
+
+export const Erro = styled.Text`
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 12;
+    padding-bottom: 5px;
+`;

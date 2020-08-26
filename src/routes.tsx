@@ -8,6 +8,7 @@ import Home from './pages/User/Home';
 
 import HomeAdmin from './pages/Admin/Home';
 import Register from './pages/Admin/Register';
+import RegisterUser from './pages/Admin/RegisterUser';
 
 const AppStack =  createStackNavigator();
 
@@ -28,6 +29,7 @@ const Routes = () => {
 
                 <AppStack.Screen name="Register" component={Register} />
                 <AppStack.Screen name="HomeAdmin" component={HomeAdmin} />
+                <AppStack.Screen name="RegisterUser" component={RegisterUser} />
 
             </AppStack.Navigator>
         </NavigationContainer>

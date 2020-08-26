@@ -22,6 +22,13 @@ export default function Home(){
         navigation.navigate('Register');
     }
 
+    function goRegisterUser(){
+        navigation.navigate('RegisterUser');
+    }
+
+    function goViewCompany(){
+        console.log('Sem dados ainda')
+    }
     useEffect(() => {
         
         async function loadUser(){
@@ -56,7 +63,7 @@ export default function Home(){
                 <Container>
                    <Button text={'Cadastrar Empresa'} onPress={goRegisterCompany} visible={screen.show_admin}/>
                    <Button text={'Visualizar Empresas '} onPress={''} visible={screen.show_admin}/>                   
-                   <Button text={'Cadastrar Usuário'} onPress={''} visible={screen.show_empresa}/>
+                   <Button text={'Cadastrar Usuário'} onPress={goRegisterUser} visible={screen.show_empresa}/>
                 </Container>
             </SafeAreaView>
             <Footer page={'Login'}/>
