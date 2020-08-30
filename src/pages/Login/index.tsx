@@ -25,8 +25,8 @@ function Login(props: any){
     const [erro,setErro] = useState('');
     const [loadingError, setLoadingError] = useState(false);
 
-    function handleNavigationToRegister(){
-        navigation.navigate('Register');
+    function handleNavigationToForgotPass(){
+        navigation.navigate('ForgotPassword');
     }
 
     async function handleNavigateToHome(){
@@ -93,7 +93,7 @@ function Login(props: any){
                 />     
                 { props.errors.DS_SENHA && <Erro>{props.errors.DS_SENHA}</Erro> }
                 <Checkbox label={'Permanecer logado'} />
-                <TouchableOpacity onPress={handleNavigationToRegister}>
+                <TouchableOpacity onPress={handleNavigationToForgotPass}>
                     <Text>Esqueci minha senha</Text>
                 </TouchableOpacity>
                 <ButtonGrey text={'Logar'} onPress={handleNavigateToHome} visible={true}/>

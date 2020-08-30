@@ -21,7 +21,7 @@ export default function Sucess(props : Iprops){
             <Background />
                 <View>
                     <Text style={{color:'green',fontWeight:'bold'}}>Sucesso!</Text>
-                    <Text style={{paddingBottom:10,paddingTop:10}}>{message}</Text>
+                    <Text style={{paddingBottom:10,paddingTop:10,marginLeft: 25}}>{message}</Text>
 
                     <Button onPress={onPress}>
                         <TextBtn>Fechar</TextBtn>

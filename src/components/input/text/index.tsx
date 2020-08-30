@@ -22,3 +22,8 @@ export default function TextInput(props : Iprops){
         </View>
     );
 }
+
+
+/*
+ Type => Pode ser text, password
+*/

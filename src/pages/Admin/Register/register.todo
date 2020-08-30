@@ -4,8 +4,10 @@ Regras
 
  A fazer 
   [x] Conectar com API
-  [x] Testar api kkk
-  [] Adicionar máscaras
-  [] Scroll infinito
+  [x] Testar api 
   [x] Modal de erro para campos invalidos
   [x] Modal de sucesso
+  [] Adicionar máscaras
+  [] Scroll infinito
+  [] Upload logo empresa
+  
