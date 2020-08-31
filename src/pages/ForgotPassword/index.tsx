@@ -1,6 +1,8 @@
 import React, { useState }  from 'react';
 import {View} from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 import {Container} from '../../theme/LayoutStyles';
 import Header from '../../components/layout/header';
 import Input from '../../components/input/text';
@@ -13,6 +15,9 @@ import {Title,Text, Divider} from './styles'
 import api from '../../services/api';
 
 export default function ForgotPassword(){
+    
+    const navigation = useNavigation();
+
     const [email, setEmail] = useState('');
     const [codigo,setCodigo] = useState('');
     const [senha, setSenha] = useState('');
@@ -97,6 +102,30 @@ export default function ForgotPassword(){
         });
     }
 
+    async function SavePassword(){
+        await api.request({
+            method: 'POST',
+            url: `/user/ChangePassword`,
+            params :{
+                DS_EMAIL : email,
+                DS_SENHA : senha
+            },
+        }).then(function(response){
+            if(response.data.valid === true){
+                
+                setForm({
+                    showCodigo: true,
+                    showEmail: false,
+                    showSenha : false
+                });
+
+                navigation.navigate('Login');
+            }
+        }).catch(function(err){
+            openModalError('Ocorreu um erro interno, favor contactar o administrador!');
+        });
+    }
+
     return(
         <Container>
             <Header/>
@@ -127,8 +156,8 @@ export default function ForgotPassword(){
                 form.showSenha === true ?
                 <View>
                     <Text>Por favor, insira a nova senha</Text>
-                    <Input text={'Senha'} onChangeText={setEmail} type={'Text'} value={email} />
-                    <Button text={'Salvar'} visible={true} onPress={SendEmail}/>
+                    <Input text={'Senha'} onChangeText={setSenha} type={'password'} value={senha} />
+                    <Button text={'Salvar'} visible={true} onPress={SavePassword}/>
                 </View>   :
                 null
             }
